@@ -1,19 +1,19 @@
 .container {
-    background-color: yellow;
+    background-color: #f1f1f1;
     color: #0f141e;
-    font-size: 32px;
+    font-size: 16px;
     font-weight: normal;
     font-family: 'Roboto', sans-serif;
+    max-width: 1000px;
+    margin: auto;
+    padding-top: 30px;
+    display: flex;
 }
 .avatar {
     width: 250px;
     border-radius: 28px;
     box-shadow: 4px 4px 14px rgba(0, 0, 0, 0);
 }
-.textinfo {
-    background-color: yellow;
-    color: #0f141e;
-    font-size: 32px;
-    font-weight: normal;
-    font-family: 'Roboto', sans-serif;
+.new {
+    margin-left: 25px;
 }
