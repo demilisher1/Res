@@ -1,14 +1,16 @@
 import React from "react";
-
-import style from "./Res.module.css"
-
+import style from './res.module.css'
 class Res extends React.Component {
     render() {
-        return(
+        return (
             <div className={style.container}>
-                Hello Please help me
+                <img src="/public/IAm.jpg" alt="Hello"/>
             </div>
-        )
+        );
     }
 }
+
+
 export default Res;
+
+

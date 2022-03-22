@@ -1,10 +1,11 @@
 import React from "react";
-import Res from "../src/components/Res/Res";
 
-export default function Res() {
-  return (
-      <div>
-        <Res />
-      </div>
-  )
+import Res from "../src/components/Res.js";
+
+   export  default function about() {
+    return (
+        <div>
+            <Res />
+        </div>
+    )
 }
