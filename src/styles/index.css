@@ -1,0 +1,9 @@
+/*TODO: Тут все стили в папке styles собираются вместе, и затем этот файл подключится к общему корневому */
+
+
+@import "reset.css";
+
+@import "fonts.css";
+@import "variables.css";
+
+
