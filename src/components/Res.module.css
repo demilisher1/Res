@@ -16,4 +16,11 @@
 }
 .new {
     margin-left: 25px;
+    font-size: 22px;
+}
+.new h1 {
+    color: wheat;
+}
+.main {
+background-color: #0f141e;
 }
