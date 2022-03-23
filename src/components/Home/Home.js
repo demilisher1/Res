@@ -1,6 +1,7 @@
 import React from "react";
-import Res from "../Res.js";
-import About from "./../components/About.js";
+import Res from "./components/Res/Res.js";
+import About from "./components/About/About.js";
+
 import style from "./Home.module.css";
 
 class Home extends React.Component {
@@ -13,4 +14,5 @@ class Home extends React.Component {
         );
     }
 }
+
 export default Home;

@@ -1,6 +1,8 @@
 import React from "react";
+
+import avatar from '../../../../../static/images/IAm.jpg'
+
 import style from './res.module.css'
-import avatar from '../../public/IAm.jpg'
 
 class Res extends React.Component {
     render() {
