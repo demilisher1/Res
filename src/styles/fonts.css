@@ -1,1 +1,5 @@
 /*TODO: Тут сделать подключение шрифтов, сами шрифты положить в папку /static/fonts */
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    /*!*src: url('../../static/fonts/Roboto');*!  подумать*/
+}
