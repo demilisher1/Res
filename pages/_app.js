@@ -1,3 +1,4 @@
+import React from "react"
 import '/src/styles/index.css'
 
 export default function MyApp({ Component, pageProps }) {
