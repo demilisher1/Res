@@ -1,5 +1,7 @@
 /*TODO: Тут сделать подключение шрифтов, сами шрифты положить в папку /static/fonts */
 @font-face {
     font-family: 'Roboto', sans-serif;
-    /*!*src: url('../../static/fonts/Roboto');*!  подумать*/
+    font-weight: 400;
+    font-style: normal;
+    src: url('/static/fonts/Roboto-Regular.ttf') format('ttf');
 }
