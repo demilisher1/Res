@@ -9,5 +9,16 @@
     margin-bottom: 10px;
 }
 .list {
+    display: flex;
+    justify-content: space-between;
+}
+.name {
+    line-height: normal;
+}
 
+.position {
+    line-height: normal;
+}
+.date {
+    line-height: normal;
 }
