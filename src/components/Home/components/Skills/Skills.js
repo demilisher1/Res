@@ -4,9 +4,11 @@ import style from './Skills.module.css'
 class Skills extends React.Component {
     render() {
         return (
-            <div className={style.container}>
-                <h2>Опыт работы</h2>
+            <div className={style.works}>
+                <div className={style.my}>Опыт работы</div>
+                <div className={style.list}>
 
+                </div>
             </div>
         );
     }

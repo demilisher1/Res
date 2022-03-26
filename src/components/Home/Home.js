@@ -10,7 +10,7 @@ import style from "./Home.module.css";
 class Home extends React.Component {
     render() {
         return (
-            <div>
+            <div className={style.main}>
                 <Res />
                 <About />
                 <Hobby />
