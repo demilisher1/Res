@@ -9,10 +9,10 @@
     font-size: 1.5em;
     font-weight: bold;
 }
+
 .story a {
     text-decoration: none;
     color: black;
     padding-bottom: 5px;
     border-bottom: 1px solid #cccccc;
-
 }

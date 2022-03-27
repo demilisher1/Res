@@ -8,5 +8,7 @@
 
 :root {
     --white: #FFF;
-    --black: #000
+    --black: #000;
+
+    --gray: #ffe5e5;
 }

@@ -25,3 +25,12 @@
     line-height: normal;
     color: #868986
 }
+
+
+
+.head,
+.bodyItem
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}

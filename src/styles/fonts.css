@@ -8,12 +8,13 @@
 @font-face {
     font-family: 'Roboto-Italic', sans-serif;
     font-weight: normal;
-    font-style: normal;
+    font-style: italic;
     src: url('/static/fonts/Roboto-Italic.ttf') format('ttf');
 }
 @font-face {
     font-family: 'Roboto-Bold', sans-serif;
-    font-weight: normal;
+    font-style: normal;
+    font-weight: 600;
     src: url('/static/fonts/Roboto-Bold.ttf') format('ttf');
 }
 

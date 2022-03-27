@@ -1,5 +1,5 @@
 .hobby {
-    background-color: #fff9dc;
+    background-color: var(--gray);
     padding: 15px 20px;
     border-radius: 20px;
 }
@@ -10,8 +10,9 @@
 
 }
 .list {
-padding: 0px 5px;
+    padding: 0px 5px;
 }
+
 .list li {
     color: #868986;
     margin-bottom: 5px;
