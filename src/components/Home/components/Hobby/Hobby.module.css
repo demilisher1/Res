@@ -1,12 +1,12 @@
 .hobby {
     background-color: #fff9dc;
     padding: 15px 20px;
-    margin-bottom: 20px;
     border-radius: 20px;
 }
 .my {
     font-size: 1.5em;
     margin: 20px 0px 10px 0px;
+    font-weight: bold;
 
 }
 .list {

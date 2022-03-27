@@ -1,16 +1,17 @@
 .works{
     padding: 15px 20px;
-    margin-bottom: 20px;
     border-radius: 25px;
     background: #e5ffe7;
 }
 .my {
     font-size: 1.5em;
     margin-bottom: 10px;
+    font-weight: bold;
 }
 .list {
     display: flex;
     justify-content: space-between;
+    padding: 0px 25px;
 }
 .name {
     line-height: normal;
@@ -18,7 +19,9 @@
 
 .position {
     line-height: normal;
+    color: #868986;
 }
 .date {
     line-height: normal;
+    color: #868986
 }

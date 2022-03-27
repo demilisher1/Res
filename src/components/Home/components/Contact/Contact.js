@@ -5,7 +5,7 @@ class Contact extends React.Component {
     render() {
         return (
             <div className={style.container}>
-                <h2>Связаться со мной</h2>
+                <div className={style.call}>Связаться со мной</div>
                 <div className={style.row}>
                     <div className={style.formgroup}>
                         <label htmlFor="name">Ваше имя</label>
@@ -15,13 +15,13 @@ class Contact extends React.Component {
                         <label htmlFor="email">Ваш email</label>
                         <input type="text" id="email" placeholder="Введите ваш email..."/>
                     </div>
-                    <div className={style.formgroup}>
-                        <label htmlFor="text">Введите ваш текст</label>
-                        <textarea id="text" cols="15" rows="2"></textarea>
-                    </div>
-                    <div>
-                        <input className={style.btn} type="submit" value="Связаться!"/>
-                    </div>
+                </div>
+                <div className={style.formgroup}>
+                    <label htmlFor="text">Введите ваш текст</label>
+                    <textarea id="text" cols="15" rows="2"></textarea>
+                </div>
+                <div>
+                    <input className={style.btn} type="submit" value="Связаться!"/>
                 </div>
             </div>
         );
