@@ -8,11 +8,7 @@
     margin-bottom: 10px;
     font-weight: bold;
 }
-.list {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 25px;
-}
+
 .name {
     line-height: normal;
 }
@@ -25,12 +21,8 @@
     line-height: normal;
     color: #868986
 }
-
-
-
-.head,
-.bodyItem
-{
+.items,
+ .list {
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
 }
