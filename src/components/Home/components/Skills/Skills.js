@@ -24,8 +24,7 @@ class Skills extends React.Component {
     };
 
     render() {
-        const head = this.state.head;
-        const body = this.state.body;
+        const {head, body} = this.state;
 
         return (
             <div className={style.works}>
@@ -36,17 +35,13 @@ class Skills extends React.Component {
                     ))}
                 </div>
                 <div>
-                    {body.map(function (value,key){
-                        const { name, date, position } = value;
-
-                        return (
-                            <div key={key} className={style.list}>
-                                <div className={style.name}>{name}</div>
-                                <div className={style.position}>{position}</div>
-                                <div className={style.date}>{date}</div>
-                            </div>
-                        )
-                    })}
+                    {body.map( ({name, position, date},key) => (
+                        <div key={key} className={style.list}>
+                            <div className={style.name}>{name}</div>
+                            <div className={style.position}>{position}</div>
+                            <div className={style.date}>{date}</div>
+                        </div>
+                    ))}
                 </div>
             </div>
         );
