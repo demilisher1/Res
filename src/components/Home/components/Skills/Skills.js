@@ -26,33 +26,27 @@ class Skills extends React.Component {
     render() {
         const head = this.state.head;
         const body = this.state.body;
-        const fold = head.map(function (currentValue, index) {
-            return (
-                <div key={index}>{currentValue}</div>
-            )
-        })
-
-        const list = body.map(function (currentValue,index){
-            const name = currentValue.name;
-            const date = currentValue.date;
-            const position = currentValue.position
-            return (
-                <div key={index} className={style.list}>
-                    <div className={style.name}>{name}</div>
-                    <div className={style.position}>{position}</div>
-                    <div className={style.date}>{date}</div>
-                </div>
-            )
-        })
 
         return (
             <div className={style.works}>
                 <div className={style.my}>Опыт работы</div>
                 <div className={style.items}>
-                    {fold}
+                    {head.map((value, key) => (
+                        <div key={key}>{value}</div>
+                    ))}
                 </div>
                 <div>
-                    {list}
+                    {body.map(function (value,key){
+                        const { name, date, position } = value;
+
+                        return (
+                            <div key={key} className={style.list}>
+                                <div className={style.name}>{name}</div>
+                                <div className={style.position}>{position}</div>
+                                <div className={style.date}>{date}</div>
+                            </div>
+                        )
+                    })}
                 </div>
             </div>
         );
