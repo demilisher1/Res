@@ -45,9 +45,26 @@ class Skills extends React.Component {
             },
         ],
     };
-
     render() {
         const {head, body} = this.state;
+        // const array = [10, 20, 130, 70, 80, 12];
+        // const filtered = array.filter(function ( Value ) {
+        //         return Value > 50;
+        //     }
+        // );
+        // console.log(filtered)
+        //
+        body.filter(function (value,index) {
+            return value.date
+        })
+        console.log(body);
+
+        // const arr = ['Ваня', 'Иштван', 'Оля'];
+        // const result = arr.map(function (item, index,array) {
+        //     return item[0]
+        // });
+        // console.log(arr);
+        // console.log(result);
 
         return (
             <div className={style.works}>
@@ -66,6 +83,8 @@ class Skills extends React.Component {
                         </div>
                     ))}
                 </div>
+                {/*{head.forEach(person => console.log(person))}*/}
+                {/*{body.filter(date => console.log(date))}*/}
             </div>
         );
     }
