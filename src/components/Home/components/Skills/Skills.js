@@ -55,9 +55,9 @@ class Skills extends React.Component {
         // console.log(filtered)
         //
         const newArray = body.filter(function (value,index) {
-            return value.date
+            return value.date > "2005 - 2006"
         })
-        console.log(body);
+        console.log(newArray);
 
         // const arr = ['Ваня', 'Иштван', 'Оля'];
         // const result = arr.map(function (item, index,array) {
