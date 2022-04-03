@@ -54,7 +54,7 @@ class Skills extends React.Component {
         // );
         // console.log(filtered)
         //
-        body.filter(function (value,index) {
+        const newArray = body.filter(function (value,index) {
             return value.date
         })
         console.log(body);
@@ -75,7 +75,7 @@ class Skills extends React.Component {
                     ))}
                 </div>
                 <div>
-                    {body.map( ({name, position, date},key) => (
+                    {body.map(({name, position, date},key) => (
                         <div key={key} className={style.list}>
                             <div className={style.name}>{name}</div>
                             <div className={style.position}>{position}</div>
