@@ -112,12 +112,13 @@ class Skills extends React.Component {
 
         // let arrOne = body.slice();
         // console.log(body);
-        //== console.log(arrOne);
+        // console.log(arrOne);
 
         // let arrOne = body.concat({name: 'NewJob', position: 'Разнорабочий', date: '2000-2000' });
         // console.log(arrOne);
 
-        // console.log(body.indexOf(name: 'ООО ММС')); // Не понял как искать в массиве индекс.
+
+        console.log(body.indexOf(['ООО ММС']))
 
         return (
             <div className={style.works}>
