@@ -118,7 +118,31 @@ class Skills extends React.Component {
         // console.log(arrOne);
 
 
-        console.log(body.indexOf(['ООО ММС']))
+        // console.log(body.indexOf(['ООО ММС']))
+        // TODO:: indexOf - метод который может найти индекс массива по его значению.
+        //  В случае с массивом body, каждым значением массива будет являться обьект,
+        //  а к примеру в массиве head каждым значением будет строка.
+        //  НО indexOF работает только с простыми массивами типа head, в которых значением является строка или число. без какой либо вложенности.
+        //  По этому  indexHead отработает а indexBody - не отработает,
+
+        const indexHead = head.indexOf('Дата'); // должен быть 2
+        const indexBody = body.indexOf({
+            name: 'ЗАО Манрос-М',
+            position: 'Грузчик в теплом складе',
+            date: '2005 - 2006',
+        });
+
+        console.log('indexHead', indexHead)
+        console.log('indexBody', indexBody)
+        // TODO:: Но если мы приведем indexBody к простому массиву, не вложенномму, все сработает
+
+        const bodyNames = body.map(item => item.name)
+        console.log('bodyNames - создали массив в котором только name', bodyNames) // создали массив в котором только name
+
+        const indexBodyForName = bodyNames.indexOf('ЗАО Манрос-М')
+
+        console.log('indexBodyForName', indexBodyForName)
+
 
         return (
             <div className={style.works}>
