@@ -137,6 +137,9 @@ class Skills extends React.Component {
         // TODO:: Но если мы приведем indexBody к простому массиву, не вложенномму, все сработает
 
         const bodyNames = body.map(item => item.name)
+        const bodyNames2 = body.map(function (value){
+            return value.name
+        })
         console.log('bodyNames - создали массив в котором только name', bodyNames) // создали массив в котором только name
 
         const indexBodyForName = bodyNames.indexOf('ЗАО Манрос-М')
