@@ -177,8 +177,13 @@ class Skills extends React.Component {
         // const Index = body.map(item => item.position);
         // const Index2 = Index.sort()
         // console.log(Index2.sort());
-        const arrOne = [10, 24, 3];
-        console.log(arrOne.sort());
+
+        // const arrOne = [8, 22, 1,];
+        // console.log(arrOne.sort());
+        // function Numeric(a, b) {
+        //     return a-b
+        // }
+        // console.log(arrOne.sort(Numeric));
 
 
 
