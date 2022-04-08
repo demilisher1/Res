@@ -125,26 +125,65 @@ class Skills extends React.Component {
         //  НО indexOF работает только с простыми массивами типа head, в которых значением является строка или число. без какой либо вложенности.
         //  По этому  indexHead отработает а indexBody - не отработает,
 
-        const indexHead = head.indexOf('Дата'); // должен быть 2
-        const indexBody = body.indexOf({
-            name: 'ЗАО Манрос-М',
-            position: 'Грузчик в теплом складе',
-            date: '2005 - 2006',
-        });
-
-        console.log('indexHead', indexHead)
-        console.log('indexBody', indexBody)
+        // const indexHead = head.indexOf('Дата'); // должен быть 2
+        // const indexBody = body.indexOf({
+        //     name: 'ЗАО Манрос-М',
+        //     position: 'Грузчик в теплом складе',
+        //     date: '2005 - 2006',
+        // });
+        //
+        // console.log('indexHead', indexHead)
+        // console.log('indexBody', indexBody)
         // TODO:: Но если мы приведем indexBody к простому массиву, не вложенномму, все сработает
 
-        const bodyNames = body.map(item => item.name)
-        const bodyNames2 = body.map(function (value){
-            return value.name
-        })
-        console.log('bodyNames - создали массив в котором только name', bodyNames) // создали массив в котором только name
+        //  const bodyNames = body.map(value => value.name)
+        // // const bodyNames2 = body.map(function (value){
+        // //     return value.name
+        // // })
+        // console.log('bodyNames - создали массив в котором только name', bodyNames) // создали массив в котором только name
+        //
+        // const indexBodyForName = bodyNames.indexOf('ЗАО Манрос-М')
+        // console.log('indexBodyForName', indexBodyForName)
 
-        const indexBodyForName = bodyNames.indexOf('ЗАО Манрос-М')
+        //TODO:: Это то что я сделал.
+        // 1. indexOf
+        // 2. find
+        // 3.findIndex
+        // 4. filter - но как я понял он лучше подходит для чисел, но так как у меня не число а строка, то отъсеять
+        // не получится (только если строку не прировнять к number)
+        // 5. includes
+        // 6. sort, на числах немого иначе пример ниже
+        // 7.
 
-        console.log('indexBodyForName', indexBodyForName)
+        // const bodyPosition = body.map(value => value.position);
+        //  console.log(bodyPosition);
+
+        //  const indexBodyForPosition = bodyPosition.indexOf('Грузчик в холодном цехе');
+        //  console.log(indexBodyForPosition);
+
+        // const bodyIndex = body.find(item => item.name === 'ЗАО Инмарко');
+        // console.log(bodyIndex);
+        //
+        // const bodyIndex2 = body.findIndex(item => item.name === 'ООО Мастер ПАК');
+        // console.log(bodyIndex2);
+
+        // const bodyIndex3 = body.filter(item => item.date === '2003 - 2004');
+        // console.log(bodyIndex3);
+
+        // const bodyIndex = body.map(item => item.name);
+        // const body2Index = bodyIndex.includes('ЗАО Инмарко');
+        // console.log(body2Index);
+
+        // const Index = body.map(item => item.position);
+        // const Index2 = Index.sort()
+        // console.log(Index2.sort());
+        const arrOne = [10, 24, 3];
+        console.log(arrOne.sort());
+
+
+
+
+
 
 
         return (
