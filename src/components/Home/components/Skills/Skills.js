@@ -1,6 +1,7 @@
 import React from "react";
 import style from './Skills.module.css'
 import {element, string} from "prop-types";
+import {makePublicRouterInstance} from "next/router";
 
 class Skills extends React.Component {
 
@@ -153,7 +154,7 @@ class Skills extends React.Component {
         // не получится (только если строку не прировнять к number)
         // 5. includes
         // 6. sort, на числах немого иначе пример ниже
-        // 7.
+        // 7. reduce
 
         // const bodyPosition = body.map(value => value.position);
         //  console.log(bodyPosition);
@@ -185,6 +186,23 @@ class Skills extends React.Component {
         // }
         // console.log(arrOne.sort(Numeric));
 
+        // const works = body.filter(value => value.date === '2005 - 2005');
+        //
+        // const works = body.filter(function (works) {
+        //     return works.date === '2005 - 2005'
+        // }).map(function (works){
+        //     return works.name
+        // });
+        // console.log(works.name);
+
+
+        const buble = body.reduce(function (newArr, body){
+            if (body.date === '2005 - 2005') {
+                newArr.push(body.name)
+            }
+            return newArr;
+        }, []);
+        console.log(buble)
 
 
 
