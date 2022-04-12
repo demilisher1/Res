@@ -204,6 +204,22 @@ class Skills extends React.Component {
         }, []);
         console.log(buble)
 
+        // var newBuble = body.reduce(function (html, body) {
+        //     if (body.date === '2005 - 2005') {
+        //         html += '<li>' + body.name + '</li>';
+        //     }
+        //     return html;
+        // }, '');
+        // console.log(newBuble);
+        //
+        // var new2buble = '<ul>' + body.reduce(function (html, body) {
+        //     if (body.date === '2005 - 2005') {
+        //         html += '<li>' + body.name + '</li>';
+        //     }
+        //     return html;
+        // }, '') + '</ul>';
+        // console.log(new2buble);
+
 
 
 
