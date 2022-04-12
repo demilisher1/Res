@@ -219,6 +219,7 @@ class Skills extends React.Component {
         //     return html;
         // }, '') + '</ul>';
         // console.log(new2buble);
+        ererer
 
 
 
