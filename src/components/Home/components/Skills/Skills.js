@@ -50,6 +50,10 @@ class Skills extends React.Component {
     render() {
         const {head, body} = this.state;
 
+        const value = head.reduce( (sum, all) => `${sum} ${all} `,)
+        return value;
+        console.log(value);
+
         // const newArray = body.filter(function (value,index) {
         //     return value.date > "2005 - 2006"
         // })
@@ -196,33 +200,13 @@ class Skills extends React.Component {
         // console.log(works.name);
 
 
-        const buble = body.reduce(function (newArr, body){
-            if (body.date === '2005 - 2005') {
-                newArr.push(body.name)
-            }
-            return newArr;
-        }, []);
-        console.log(buble)
-
-        // var newBuble = body.reduce(function (html, body) {
+        // const buble = body.reduce(function (newArr, body){
         //     if (body.date === '2005 - 2005') {
-        //         html += '<li>' + body.name + '</li>';
+        //         newArr.push(body.name)
         //     }
-        //     return html;
-        // }, '');
-        // console.log(newBuble);
-        //
-        // var new2buble = '<ul>' + body.reduce(function (html, body) {
-        //     if (body.date === '2005 - 2005') {
-        //         html += '<li>' + body.name + '</li>';
-        //     }
-        //     return html;
-        // }, '') + '</ul>';
-        // console.log(new2buble);
-        ererer
-
-
-
+        //     return newArr;
+        // }, []);
+        // console.log(buble)
 
 
 
