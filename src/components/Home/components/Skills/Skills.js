@@ -50,24 +50,28 @@ class Skills extends React.Component {
         ],
     };
 
+    const customFilter = (array, callback) => {
+        let newArray = [];
+        for (let index in array) {
+            if(callback(array[index], index)) {
+                newArray.push(array[index])
+            }
+        }
+        return newArray;
+    }
+
+
 
 
     render() {
         const {head, body} = this.state;
-
-        const customFilter = (array, callback) => {
-            let newArray = [];
-            for (let index in array) {
-                if(callback(array[index], index)) {
-                    newArray.push(array[index])
-                }
+        const FilterHead = this.customFilter(head, (value, index) =>{
+            if (value === 'Место работы') {
+                return true;
             }
-            customFilter();
-            console.log(newArray);
-            return newArray;
-        }
-
-
+            return false;
+        } );
+        console.log(FilterHead)
         return (
             <div className={style.works}>
                 <div className={style.my}>Опыт работы</div>
