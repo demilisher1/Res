@@ -148,10 +148,12 @@
 // console.log(works.name);
 
 
-// const buble = body.reduce(function (newArr, body){
-//     if (body.date === '2005 - 2005') {
-//         newArr.push(body.name)
-//     }
-//     return newArr;
-// }, []);
+// const buble = body.reduce(function (accum, body){
+//     accum = accum + ' ' + body.date
+//     return accum;
+// }, '');
 // console.log(buble)
+
+создать фунцию которая на входе будет принимать массив функцию колбэка и инитиалвалл. фуннкция должна вернуть
+значение которое я буду преобразовывать в функции колбека. изначально до выполнения цикла переменная в которую я буду складывать результат
+будет равна инишвалл.
