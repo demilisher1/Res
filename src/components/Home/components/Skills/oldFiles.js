@@ -154,6 +154,68 @@
 // }, '');
 // console.log(buble)
 
-создать фунцию которая на входе будет принимать массив функцию колбэка и инитиалвалл. фуннкция должна вернуть
-значение которое я буду преобразовывать в функции колбека. изначально до выполнения цикла переменная в которую я буду складывать результат
-будет равна инишвалл.
+// создать фунцию которая на входе будет принимать массив функцию колбэка и инитиалвалл. фуннкция должна вернуть
+// значение которое я буду преобразовывать в функции колбека. изначально до выполнения цикла переменная в которую я буду складывать результат
+// будет равна инишвалл.
+
+//     customReduce = (array, callback, initialValue) => {
+//     let init = initialValue;
+//     for (let index in array) {
+//         const newVal = callback(init, array[index], index);
+//         init = newVal
+//     }
+//     return init;
+// };
+//
+// const Reducer = this.customReduce(body, (acc, value, index) => {
+//     // debugger;
+//     acc = acc + ' ' + value.name;
+//     return acc
+// }, '');
+// console.log(Reducer);
+
+//     customFind = (array, callback) => {
+//     for (let index in array) {
+//         // debugger;
+//         const item = array[index];
+//         const findStatus = callback(item);
+//         if (findStatus) {
+//             return item;
+//         }
+//     }
+// };
+//
+// customFind = (array, callback) => {
+//     for (let item of array) {
+//         if (callback(item)) {
+//             return item
+//         }
+//     }
+// };
+//
+// const FindBH = this.customFind(body, (item) =>{
+//
+//     if (item.name === 'ЗАО Экоил') {
+//         return true;
+//     }
+//     return false;
+// });
+// console.log(FindBH)
+// customFilter = (array, callback) => {
+//     let newArray = [];
+//     for (let index in array) {
+//         const value = array[index];
+//         debugger;
+//         const status = callback(value, index);
+//         if(status) {
+//             newArray.push(value)
+//         }
+//     }
+//     return newArray;
+// };
+// const FilterHead = this.customFilter(head, (value, index) =>{
+//     if (value === 'Место работы') {
+//         return true;
+//     }
+//     return false;
+// });
