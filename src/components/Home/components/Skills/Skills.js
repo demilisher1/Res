@@ -1,5 +1,6 @@
 import React from "react";
 import style from './Skills.module.css'
+import index from "../../../../../pages";
 // import {element, string} from "prop-types";
 // import {makePublicRouterInstance} from "next/router";
 // import index from "../../../../../pages";
@@ -51,12 +52,25 @@ class Skills extends React.Component {
         ],
     };
 
-
+    customFindIndex = (array, callback) => {
+        for (let index in array) {
+            debugger;
+            if (callback(index)) {
+                return index;
+            }
+        }
+    };
 
     render() {
         const {head, body} = this.state;
 
-
+        const FindInd = this.customFindIndex(body, (index) => {
+            if (index === '6') {
+                return true
+            }
+            return false
+        })
+        console.log(FindInd);
 
         return (
             <div className={style.works}>
