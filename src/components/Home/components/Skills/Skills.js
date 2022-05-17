@@ -58,21 +58,39 @@ class Skills extends React.Component {
     //         const item = array[index];
     //         const findStatus = callback(item);
     //         if (findStatus) {
+    //             debugger;
     //             return index;
     //         }
+    //         debugger;
     //     }
     // };
+
+    customFindIndex = (array, callback) => {
+        for (let index in array) {
+            const item = array[index];
+            const findStatus = callback(item);
+            if (findStatus) {
+                console.log('я что то нашел')
+                return index;
+            }
+
+            console.log('я ищу не могу найи')
+        }
+        console.log('я ничего не нашел')
+
+        debugger;
+    };
 
     render() {
         const {head, body} = this.state;
 
-        // const FindInd = this.customFindIndex(body, (item) => {
-        //     if (item.name === 'ЗАО Инмарко') {
-        //         return true
-        //     }
-        //     return false
-        // });
-        // console.log(FindInd);
+        const FindInd = this.customFindIndex(body, (item) => {
+            if (item.name === 'ЗАО Инмарко') {
+                return false
+            }
+            // return true
+        });
+        console.log(FindInd);
 
 
         return (
