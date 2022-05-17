@@ -86,7 +86,7 @@ class Skills extends React.Component {
         const {head, body} = this.state;
 
         const FindInd = this.customFindIndex(body, (item) => {
-            if (item.name === 'ЗАО Инмарко') {
+            if (item.name === 'ЗАО hkgihg') {
                 return true
             }
             return false
