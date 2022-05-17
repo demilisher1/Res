@@ -70,15 +70,16 @@ class Skills extends React.Component {
             const item = array[index];
             const findStatus = callback(item);
             if (findStatus) {
-                console.log('я что то нашел')
+                // console.log('я что то нашел')
                 return index;
             }
 
-            console.log('я ищу не могу найи')
+            // console.log('я ищу не могу найи')
         }
-        console.log('я ничего не нашел')
+        return -1
+        // console.log('я ничего не нашел')
 
-        debugger;
+        // debugger;
     };
 
     render() {
@@ -86,9 +87,9 @@ class Skills extends React.Component {
 
         const FindInd = this.customFindIndex(body, (item) => {
             if (item.name === 'ЗАО Инмарко') {
-                return false
+                return true
             }
-            // return true
+            return false
         });
         console.log(FindInd);
 
