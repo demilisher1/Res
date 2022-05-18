@@ -222,3 +222,31 @@
 //     }
 //     return false;
 // });
+
+// customFindIndex = (array, callback) => {
+//
+//     for (let index in array) {
+//         const item = array[index];
+//         const findStatus = callback(item);
+//         if (findStatus) {
+//             // console.log('я что то нашел')
+//
+//             return index;
+//         }
+//
+//         // console.log('я ищу не могу найти')
+//     }
+//
+//     return -1
+//     // console.log('я ничего не нашел')
+//
+//     // debugger;
+// };
+
+// const FindInd = this.customFindIndex(body, (item) => {
+//     if (item.name === 'ЗАО hkgihg') {
+//         return true
+//     }
+//     return false
+// });
+// console.log(FindInd);

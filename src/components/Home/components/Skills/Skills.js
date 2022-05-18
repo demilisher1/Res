@@ -65,34 +65,34 @@ class Skills extends React.Component {
     //     }
     // };
 
-    customFindIndex = (array, callback) => {
-        for (let index in array) {
-            const item = array[index];
-            const findStatus = callback(item);
-            if (findStatus) {
-                // console.log('я что то нашел')
-                return index;
+
+    // TODO: Реализовать функцию удаления элемента из массива, функция должна принимать массив и колбэк в аргументах
+    // При возвращении значения  true колбэка необходимо удалить элемент из массива
+    // функция должна возвращать новый массив не изменяя массив который получаем в аргументах
+
+    customDelete = (array, callback) => {
+        let newArray = [];
+        for (let value of array) {
+            const deleteStatus = callback(value);
+            if (deleteStatus === false) {
+                newArray.push(value);
             }
+        };
+        return newArray;
+    }
 
-            // console.log('я ищу не могу найи')
-        }
-        return -1
-        // console.log('я ничего не нашел')
-
-        // debugger;
-    };
 
     render() {
         const {head, body} = this.state;
 
-        const FindInd = this.customFindIndex(body, (item) => {
-            if (item.name === 'ЗАО hkgihg') {
-                return true
+        const deleteVal = this.customDelete(body, (value, index) =>{
+            // debugger;
+            if (value.name === 'ЗАО Инмарко') {
+                return true;
             }
-            return false
-        });
-        console.log(FindInd);
-
+            return false;
+        })
+        console.log(deleteVal)
 
         return (
             <div className={style.works}>
