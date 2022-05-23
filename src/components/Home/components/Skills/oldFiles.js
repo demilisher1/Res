@@ -250,3 +250,78 @@
 //     return false
 // });
 // console.log(FindInd);
+// customFindIndex = (array, callback) => {
+//     for (let index in array) {
+//         // debugger;
+//         const item = array[index];
+//         const findStatus = callback(item);
+//         if (findStatus) {
+//             debugger;
+//             return index;
+//         }
+//         debugger;
+//     }
+// };
+
+
+// TODO: Реализовать функцию удаления элемента из массива, функция должна принимать массив и колбэк в аргументах
+// При возвращении значения  true колбэка необходимо удалить элемент из массива
+// функция должна возвращать новый массив не изменяя массив который получаем в аргументах
+
+// customDelete = (array, callback) => {
+//     let newArray = [];
+//     for (let value of array) {
+//         const deleteStatus = callback(value);
+//         if (deleteStatus === false) {
+//             newArray.push(value);
+//         }
+//     };
+//     return newArray;
+// }
+
+// const deleteVal = this.customDelete(body, (value, index) =>{
+//     // debugger;
+//     if (value.name === 'ЗАО Инмарко') {
+//         return true;
+//     }
+//     return false;
+// })
+// console.log(deleteVal)
+
+// const arr = [1,3,444,5,1,1,1,6,6,1,4,2,10,2,3,5,3,1,9,1,7,1,1,1];
+// const uniqVal = [...arr];
+// const arr2 = []
+// for (let index in arr) {
+//     // debugger;
+//     const res = arr[index];
+//     const newIndex = uniqVal.indexOf(res);
+//     if (newIndex !==  -1) {
+//         uniqVal.splice(newIndex, 1);
+//         const statusFinding = uniqVal.includes(res);
+//         if (statusFinding) {
+//             const pushing = !arr2.includes(res);
+//             if(pushing){
+//                 arr2.push(res);
+//             }
+//         }
+//     }
+// };
+// console.log([...tttt])
+
+// const arrrr = [];
+// const testttt = new Map()
+// for (let value of arr) {
+//     if(testttt.has(value)) {
+//         testttt.set(value, testttt.get(value) + 1)
+//     } else {
+//         testttt.set(value, 1)
+//     }
+//
+// };
+// testttt.forEach((item, index) => {
+//     if(item >= 2){
+//         arrrr.push(Number(index))
+//     }
+// })
+// console.log(arrrr)
+

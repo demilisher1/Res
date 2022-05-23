@@ -52,47 +52,31 @@ class Skills extends React.Component {
         ],
     };
 
-    // customFindIndex = (array, callback) => {
-    //     for (let index in array) {
-    //         // debugger;
-    //         const item = array[index];
-    //         const findStatus = callback(item);
-    //         if (findStatus) {
-    //             debugger;
-    //             return index;
-    //         }
-    //         debugger;
-    //     }
-    // };
-
-
-    // TODO: Реализовать функцию удаления элемента из массива, функция должна принимать массив и колбэк в аргументах
-    // При возвращении значения  true колбэка необходимо удалить элемент из массива
-    // функция должна возвращать новый массив не изменяя массив который получаем в аргументах
-
-    customDelete = (array, callback) => {
-        let newArray = [];
-        for (let value of array) {
-            const deleteStatus = callback(value);
-            if (deleteStatus === false) {
-                newArray.push(value);
-            }
-        };
-        return newArray;
-    }
-
-
     render() {
         const {head, body} = this.state;
 
-        const deleteVal = this.customDelete(body, (value, index) =>{
-            // debugger;
-            if (value.name === 'ЗАО Инмарко') {
-                return true;
-            }
-            return false;
-        })
-        console.log(deleteVal)
+        const array = [12, 345, 12, 33, 455, 1, 45, 345, 222, 1, 45, 222, 11];
+        //Отобразить сумму тех элементов которые повтораяются 2 и более раз
+        const summ = {
+        };
+
+        // const uniqVal = [...array];
+        // const arr2 = []
+        // for (let index in array) {
+        //     // debugger;
+        //     const res = array[index];
+        //     const newIndex = uniqVal.indexOf(res);
+        //     if (newIndex !==  -1) {
+        //         uniqVal.splice(newIndex, 1);
+        //         const statusFinding = uniqVal.includes(res);
+        //         if (statusFinding) {
+        //             // const pushing = !arr2.includes(res);
+        //             // if(pushing){
+        //                 arr2.push(res);
+        //         }
+        //     }
+        // };
+        // console.log([...arr2])
 
         return (
             <div className={style.works}>
