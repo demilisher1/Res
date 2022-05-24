@@ -55,28 +55,45 @@ class Skills extends React.Component {
     render() {
         const {head, body} = this.state;
 
-        const array = [12, 345, 12, 33, 455, 1, 45, 345, 222, 1, 45, 222, 11];
-        //Отобразить сумму тех элементов которые повтораяются 2 и более раз
-        const summ = {
-        };
+        const arr = [12, 345, 12, 33, 455, 1, 45, 345, 222, 1, 45, 222, 11];
+        let x = 0;
+        for (let item of arr) {
+            if (item > x) {
+                x = item
+            }
+        }
 
-        // const uniqVal = [...array];
-        // const arr2 = []
-        // for (let index in array) {
-        //     // debugger;
-        //     const res = array[index];
-        //     const newIndex = uniqVal.indexOf(res);
-        //     if (newIndex !==  -1) {
-        //         uniqVal.splice(newIndex, 1);
-        //         const statusFinding = uniqVal.includes(res);
-        //         if (statusFinding) {
-        //             // const pushing = !arr2.includes(res);
-        //             // if(pushing){
-        //                 arr2.push(res);
-        //         }
+        console.log(x)
+
+        в результате должны быть только четные числа
+        // const resArr = [];
+        // for (let index in arr) {
+        //     const value = arr[index];
+        //     const cloneArr = [...arr]
+        //     cloneArr.splice(Number(index), 1);
+        //     if(cloneArr.includes(value)){
+        //         resArr.push(value)
         //     }
-        // };
-        // console.log([...arr2])
+        // }
+        //
+        // const obj = {};
+        // let sum = 0;
+        // for (let item of arr) {
+        //     if(item in obj) {
+        //         obj[item] = obj[item] + 1
+        //     }else {
+        //         obj[item] = 1
+        //     }
+        // }
+        // for (let objectKey in obj) {
+        //     const objectValue = obj[objectKey]
+        //     if(objectValue >= 2) {
+        //         sum = sum + objectKey * objectValue;
+        //     }
+        // }
+        // console.log(resArr)
+        // console.log(obj)
+        // console.log(sum)
 
         return (
             <div className={style.works}>
