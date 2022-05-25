@@ -325,3 +325,58 @@
 // })
 // console.log(arrrr)
 
+// в результате должны быть только четные числа
+// const resArr = [];
+// for (let index in arr) {
+//     const value = arr[index];
+//     const cloneArr = [...arr]
+//     cloneArr.splice(Number(index), 1);
+//     if(cloneArr.includes(value)){
+//         resArr.push(value)
+//     }
+// }
+//
+// const obj = {};
+// let sum = 0;
+// for (let item of arr) {
+//     if(item in obj) {
+//         obj[item] = obj[item] + 1
+//     }else {
+//         obj[item] = 1
+//     }
+// }
+// for (let objectKey in obj) {
+//     const objectValue = obj[objectKey]
+//     if(objectValue >= 2) {
+//         sum = sum + objectKey * objectValue;
+//     }
+// }
+// console.log(resArr)
+// console.log(obj)
+// console.log(sum)
+
+// let x = [];
+//
+// for (let item of arr) {
+//     //  if (item % 2 === 0)
+//     if (item % 2 === 0){
+//         x.push(item)
+//     }
+// }
+// let x = 0;
+// for (let item of arr) {
+//     if (item > x) {
+//         x = item
+//     }
+// }
+
+// console.log(x)
+
+// const x = [];
+// for (let item of arr) {
+//     if (item % 2 === 0 + 1) {
+//         x.push(item)
+//     }
+// }
+// console.log(x)
+
