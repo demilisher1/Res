@@ -67,6 +67,8 @@ class Skills extends React.Component {
         //         lesha: index,
         //         shu: arr[index]
         //     })
+
+
         // }
 
         console.log(newArr)
