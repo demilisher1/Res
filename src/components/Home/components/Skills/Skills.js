@@ -47,7 +47,6 @@ class Skills extends React.Component {
                 name: 'Одноименное ИП',
                 position: 'Директор ==> Инженер микроэлектронщик',
                 date: '2011 - now',
-
             },
         ],
     };
@@ -56,25 +55,23 @@ class Skills extends React.Component {
         const {head, body} = this.state;
 
         const arr = [12, 345, 12, 33, 455, 1, 45, 345, 222, 1, 45, 222, 11];
-        // const nArr = [];
-        // const searchIndex = arr[index];
+
+        const newArr = arr.map((value, index) => ({
+            lesha: index,
+            shu: value
+        }));
+
+
         // for (let index in arr) {
-        //     debugger;
-        //     if (index % 2 == 0){
-        //         nArr.push(searchIndex)
-        //     }
+        //     newArr.push({
+        //         lesha: index,
+        //         shu: arr[index]
+        //     })
+
+
         // }
-        // const uniqVal = [...arr];
-        const arr2 = []
-        for (let index in arr) {
-            debugger;
-            const res = arr[index];
-            const newIndex = arr.indexOf(res);
-            if (newIndex % 2 == 0) {
-                arr2.push(newIndex)
-            }
-        };
-        console.log([...arr2])
+
+        console.log(newArr)
 
         return (
             <div className={style.works}>

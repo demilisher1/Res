@@ -380,3 +380,24 @@
 // }
 // console.log(x)
 
+// const uniqVal = [...arr];
+// const arr2 = []
+// for (let index in arr) {
+//     debugger;
+//     const res = arr[index];
+//     const newIndex = arr.indexOf(res);
+//     if (newIndex % 2 == 0) {
+//         arr2.push(newIndex)
+//     }
+// };
+// console.log([...arr2])
+
+// const nArr = [];
+// for (let index in arr) {
+//     const searchValue = arr[index];
+//     // debugger;
+//     if (index % 2 === 0){
+//         nArr.push(searchValue)
+//     }
+// }
+// console.log(nArr);
