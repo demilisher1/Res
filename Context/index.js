@@ -4,7 +4,12 @@ class Fruit {
         this.name = props.name;
         this.color = props.color;
         this.sens = props.sens;
-        this.price = props.price;
+        // if (props.price === undefined) {
+        //     this.price = 0;
+        // } else {
+        //     this.price = props.price
+        // }
+        this.price = props.price || 0
     }
 
     getColor() {
@@ -51,21 +56,28 @@ const List = [
     Vinograd
 ];
 
+const Eblan = [];
+for (let value of List) {
+    Eblan.push(value.name)
+};
+console.log(Eblan)
 
-const initValue = 0;
-const sumInitValue = List.reduce(function (acumulator, currentValue) {
-    if () {
-        acumulator = acumulator + currentValue.price;
-        return acumulator
-    } else {
 
-    }
+// const newMap = List.map((value) => value.name)
+// console.log(newMap)
 
-}, initValue)
 
 // const initValue = 0;
-// const sumInitValue = List.reduce((acum, Value) => acum + Value.price, initValue );
-console.log(sumInitValue);
+// const sumInitValue = List.reduce(function (acumulator, currentValue) {
+//     return acumulator + currentValue.price;
+// }, initValue)
+//
+//
+// // const initValue = 0;
+// // const sumInitValue = List.reduce((acum, Value) => acum + Value.price, initValue );
+// console.log(List);
+// console.log(sumInitValue);
+// console.log(List);
 
 // let x = 0;
 // for (let object of List) {
