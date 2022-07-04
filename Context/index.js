@@ -1,36 +1,50 @@
-function fmap(a, gen) {
-    return function() {
-        let args = [];
-
-}
-
-
-let gen = sequence(1, 1);
-function square(x) { return x * x; }
-let squareGen = fmap(square, gen);
-
-console.log(squareGen()); // 1
-console.log(squareGen()); // 4
-console.log(squareGen()); // 9
-console.log(squareGen()); // 16
-
-
-
-
-// function map(fn, array) {  // Создаем функию по условию
+// function sequence(start, step) {
 //
-//     let Arr = []; // Создаем новый массив для хранения результата отработки цмкла
-//     for (let i = 0; i < array.length; i++) {  // обрабатываем каждый элемент массива по его длине
-//         Arr.push(fn(array[i])) // обрабатывает каждый элемент массива этой функцией(fn)
-//                                // тоесть вызываем ее и в качестве аргумента кладем массив и работаем
-//                                // с элементами массива
+//     let Init1 = start - step;
+//     return function () {
+//         return Init1 += step
 //     }
-//     return Arr // возвращаем массив
+//
 // }
 //
-// function square(x) {return x * x;};
-// console.log(map(square, [1, 2, 3, 4])); // [1, 4, 9, 16]
-// console.log(map(square, [])); // []
+// function fmap(a, gen) {
+//     return function () {
+//         let Argum = arguments.length;
+//         let Arr =  [];
+//         for (let i = 0; i <Argum; i++) {
+//             a(gen())
+//         }
+//     }
+//
+//
+// }
+// let gen = sequence(1, 1);
+// function square(x) { return x * x; }
+// let squareGen = fmap(square, gen);
+//
+// console.log(squareGen()); // 1
+// console.log(squareGen()); // 4
+// console.log(squareGen()); // 9
+// console.log(squareGen()); // 16
+
+// let Arr = [];
+// for (let index in array) {
+//     Arr.push(fn(array[index]))
+// }
+// return Arr
+
+function map(fn, array) {
+
+    const Arr = array;
+    const Arr2 = Arr.map((value) => {
+        const item =
+
+ })
+}
+
+function square(x) {return x * x;};
+console.log(map(square, [1, 2, 3, 4])); // [1, 4, 9, 16]
+console.log(map(square, [])); // []
 
 // function sequence(start, step) {
 //     let Init1 = start - step;
