@@ -1,31 +1,64 @@
+function fmap(a, gen) {
+    return function() {
+        let args = [];
 
-function sequence(start, step) {
-    let Init1 = start - step;
-    return function () {
-        return Init1 += step
-    }
 }
-// var generator = sequence(10, 3);
-// var generator2 = sequence(7, 1);
+
+
+let gen = sequence(1, 1);
+function square(x) { return x * x; }
+let squareGen = fmap(square, gen);
+
+console.log(squareGen()); // 1
+console.log(squareGen()); // 4
+console.log(squareGen()); // 9
+console.log(squareGen()); // 16
+
+
+
+
+// function map(fn, array) {  // Создаем функию по условию
 //
-// console.log(generator()); // 10
-// console.log(generator()); // 13
-// console.log(generator2()); // 7
-// console.log(generator()); // 16
-// console.log(generator2()); // 8
+//     let Arr = []; // Создаем новый массив для хранения результата отработки цмкла
+//     for (let i = 0; i < array.length; i++) {  // обрабатываем каждый элемент массива по его длине
+//         Arr.push(fn(array[i])) // обрабатывает каждый элемент массива этой функцией(fn)
+//                                // тоесть вызываем ее и в качестве аргумента кладем массив и работаем
+//                                // с элементами массива
+//     }
+//     return Arr // возвращаем массив
+// }
+//
+// function square(x) {return x * x;};
+// console.log(map(square, [1, 2, 3, 4])); // [1, 4, 9, 16]
+// console.log(map(square, [])); // []
 
-function take(gen, x) {
-    let newArray = [];
-    for (let index = 0; index < x; index++) {
-        newArray.push(gen())
-    }
-    return newArray
-}
-
-var gen2 = sequence(0, 2);
-
-
-console.log(take(gen2, 5)); // [0, 2, 4, 6, 8 ]
+// function sequence(start, step) {
+//     let Init1 = start - step;
+//     return function () {
+//         return Init1 += step
+//     }
+// }
+// // var generator = sequence(10, 3);
+// // var generator2 = sequence(7, 1);
+// //
+// // console.log(generator()); // 10
+// // console.log(generator()); // 13
+// // console.log(generator2()); // 7
+// // console.log(generator()); // 16
+// // console.log(generator2()); // 8
+//
+// function take(gen, x) {
+//     let newArray = [];
+//     for (let index = 0; index < x; index++) {
+//         newArray.push(gen())
+//     }
+//     return newArray
+// }
+//
+// var gen2 = sequence(0, 2);
+//
+//
+// console.log(take(gen2, 5)); // [0, 2, 4, 6, 8 ]
 
 
 

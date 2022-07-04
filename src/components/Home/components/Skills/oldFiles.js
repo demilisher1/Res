@@ -401,3 +401,26 @@
 //     }
 // }
 // console.log(nArr);
+// const arr = [12, 345, 12, 33, 455, 1, 45, 345, 222, 1, 45, 222, 11];
+//
+// const newArr = arr.map((value, index) => ({
+//     lesha: index,
+//     shu: value
+// }));
+//
+// const newArr2 = arr.map((value, index) =>({
+//     lesha: index,
+//     shu: value
+// }));
+//
+//
+// for (let index in arr) {
+//     newArr.push({
+//         lesha: index,
+//         shu: arr[index]
+//     })
+//
+//
+// }
+//
+// console.log(newArr2)

@@ -7,7 +7,6 @@ import style from './res.module.css'
 class Res extends React.Component {
     render() {
         return (
-            // <div className={style.container}>
             <div className={style.info}>
                 <img src={avatar.src} alt='My Photo' className={style.avatar}/>
                 <div className={style.text}>
@@ -20,7 +19,6 @@ class Res extends React.Component {
                     </div>
                 </div>
             </div>
-            // </div>
         );
     }
 }
