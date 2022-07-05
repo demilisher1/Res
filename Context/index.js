@@ -34,14 +34,9 @@
 // return Arr
 
 function map(fn, array) {
-
-    const Arr = array;
-    const Arr2 = Arr.map((value) => {
-        const item =
-
- })
+    const result = array.map((value) => fn(value))
+return result
 }
-
 function square(x) {return x * x;};
 console.log(map(square, [1, 2, 3, 4])); // [1, 4, 9, 16]
 console.log(map(square, [])); // []
