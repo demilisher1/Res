@@ -8,19 +8,42 @@ function sequence(start, step) {
 };
 
 function fmap(a, gen) {
-    return function () {
-        return a(gen())
+
+    return function (...arg) {
+        const resultGen = gen(...arg);
+        const relultA = a(resultGen)
+        debugger;
+        return relultA;
     };
 }
 
-let gen = sequence(1, 1);
-function square(x) { return x * x; }
-let squareGen = fmap(square, gen);
+function square(x) {
+    return x * x;
+}
 
-console.log(squareGen()); // 1
-console.log(squareGen()); // 4
-console.log(squareGen()); // 9
-console.log(squareGen()); // 16
+function add(...arg) {
+    //
+    // let sum = 0;
+    // for (let i = 0; i < arg.length; i++) {
+    //     sum += arg[i]
+    // }
+    //
+    // return sum
+    // let sum = 0;
+    // for (let value of arg) {
+    //
+    //     sum += value
+    // }
+    // return sum
+     return arg.reduce((pValue, cValue) => pValue + cValue, 0);
+}
+
+
+let squareAdd = fmap(square, add);
+
+
+console.log(squareAdd(2, 4, 5, 10)); // 25 = (2 + 3) ^ 2
+console.log(squareAdd(5, 7, 8, 9)); // 144 = (5 + 7) ^ 2
 
 // let Arr = [];
 // for (let index in array) {
