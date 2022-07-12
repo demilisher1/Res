@@ -1,49 +1,104 @@
-function sequence(start, step) {
 
-    let Init1 = start - step;
-    return function () {
-        return Init1 += step
+
+// const Arr = [1,-4,7,12];
+// let resultArr = 0;
+//
+// for (let value of Arr) {
+//     if (value > 0) {
+//         resultArr += value
+//     }
+// }
+// console.log(resultArr);
+
+
+
+const Arr = [1,-4,7,12];
+
+function customR(callback, array) {
+    for (let value of array) {
+
     }
-
 };
 
-function fmap(a, gen) {
-
-    return function (...arg) {
-        const resultGen = gen(...arg);
-        const relultA = a(resultGen)
-        debugger;
-        return relultA;
-    };
-}
-
-function square(x) {
-    return x * x;
-}
-
-function add(...arg) {
-    //
-    // let sum = 0;
-    // for (let i = 0; i < arg.length; i++) {
-    //     sum += arg[i]
-    // }
-    //
-    // return sum
-    // let sum = 0;
-    // for (let value of arg) {
-    //
-    //     sum += value
-    // }
-    // return sum
-     return arg.reduce((pValue, cValue) => pValue + cValue, 0);
-}
+const result = customR(((pValue, cValue) => {
+    debugger
+    if(cValue > 0){
+        return pValue + cValue
+    } else {
+        return pValue
+    }
+}), Arr);
 
 
-let squareAdd = fmap(square, add);
+// const posN = Arr.filter(function (a) {
+//     return a >= 0
+// });
+// const sumArr = Arr.reduce((pValue, cValue) => {
+//     debugger
+//     if(cValue > 0){
+//         return pValue + cValue
+//     } else {
+//         return pValue
+//     }
+//
+//
+// }, 0)
+// console.log(sumArr);
 
 
-console.log(squareAdd(2, 4, 5, 10)); // 25 = (2 + 3) ^ 2
-console.log(squareAdd(5, 7, 8, 9)); // 144 = (5 + 7) ^ 2
+
+
+
+
+
+
+
+// function sequence( start, step) {
+//
+//     let Init1 = start - step;
+//     return function () {
+//         return Init1 += step
+//     }
+//
+// };
+//
+// function fmap(a, gen) {
+//
+//     return function (...arg) {
+//         const resultGen = gen(...arg);
+//         const relultA = a(resultGen)
+//         debugger;
+//         return relultA;
+//     };
+// }
+//
+// function square(x) {
+//     return x * x;
+// }
+//
+// function add(...arg) {
+//     //
+//     // let sum = 0;
+//     // for (let i = 0; i < arg.length; i++) {
+//     //     sum += arg[i]
+//     // }
+//     //
+//     // return sum
+//     // let sum = 0;
+//     // for (let value of arg) {
+//     //
+//     //     sum += value
+//     // }
+//     // return sum
+//      return arg.reduce((pValue, cValue) => pValue + cValue, 0);
+// }
+//
+//
+// let squareAdd = fmap(square, add);
+//
+//
+// console.log(squareAdd(2, 4, 5, 10)); // 25 = (2 + 3) ^ 2
+// console.log(squareAdd(5, 7, 8, 9)); // 144 = (5 + 7) ^ 2
 
 // let Arr = [];
 // for (let index in array) {
