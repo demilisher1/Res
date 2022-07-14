@@ -1,5 +1,3 @@
-
-
 // const Arr = [1,-4,7,12];
 // let resultArr = 0;
 //
@@ -10,31 +8,103 @@
 // }
 // console.log(resultArr);
 
+// TODO::
+// Задача функции: Изменить значения массива при это не изменяя входящий массив то есть вернуть новый массив с новыми значениями
+// Функция принимает:
+// 1) массив
+// 2) функцию колбека которая будет изменять значение
+// Функция возвращает :  функция должна вернуть новый массив с измененными значениями
 
+// function customMap(array, change) {
+//     let result = [];
+//     for (let value of array) {
+//         result.push(change(value))
+//     }
+//     return result
+// }
+
+// function customFilter(array, filter) {
+//     let result = [];
+//     for (let value of array) {
+//         if (filter(value)) {
+//             result.push(value)
+//         }
+//     }
+//     return result
+// }
+//
+// function filter(value) {
+//     return value > 0
+// };
+//
+// const Res = customFilter(Arr, filter)
+// console.log(Res)
 
 const Arr = [1,-4,7,12];
-
 function customR(callback, array) {
+    let result = 0;
     for (let value of array) {
-
+        callback(result)
     }
+    return
 };
 
-const result = customR(((pValue, cValue) => {
-    debugger
-    if(cValue > 0){
-        return pValue + cValue
+
+const result = customR(((sum, current) => {
+
+    if(current > 0){
+        return sum + current
     } else {
-        return pValue
+        return sum
     }
 }), Arr);
+const abc = customR()
+console.log(abc)
 
+// function suma (money, sok) {
+//     let sum = 0;
+//     for (let value of money) {
+//         if (value > 0) {
+//             sum = sum + sok(value)
+//         }
+//     }
+//     return sum
+// };
+//
+//
+// function test(money, sok) {
+//     let sum = 0;
+//     for (let value of money) {
+//         if (value > 0) {
+//             sum = sum + sok(value)
+//         }
+//     }
+// }
+//
+// const result = suma(Arr, sok)
+// const result2 = suma(Arr, nadva)
+//
+// test(Arr, sok);
+//
+//
+// console.log(result)
+// console.log(result2)
+//
+//
+// function sok(a) {
+//     return a * a
+// }
+//
+// function nadva(a) {
+//     return a / 2
+// }
 
 // const posN = Arr.filter(function (a) {
+//     debugger
 //     return a >= 0
 // });
 // const sumArr = Arr.reduce((pValue, cValue) => {
-//     debugger
+// debugger
 //     if(cValue > 0){
 //         return pValue + cValue
 //     } else {
@@ -44,14 +114,6 @@ const result = customR(((pValue, cValue) => {
 //
 // }, 0)
 // console.log(sumArr);
-
-
-
-
-
-
-
-
 
 // function sequence( start, step) {
 //
@@ -106,8 +168,6 @@ const result = customR(((pValue, cValue) => {
 // }
 // return Arr;
 
-//
-
 // function sequence(start, step) {
 //     let Init1 = start - step;
 //     return function () {
@@ -135,10 +195,6 @@ const result = customR(((pValue, cValue) => {
 //
 //
 // console.log(take(gen2, 5)); // [0, 2, 4, 6, 8 ]
-
-
-
-
 
 //
 // class Fruit {
@@ -204,10 +260,8 @@ const result = customR(((pValue, cValue) => {
 // };
 // console.log(Eblan)
 
-
 // const newMap = List.map((value) => value.name)
 // console.log(newMap)
-
 
 // const initValue = 0;
 // const sumInitValue = List.reduce(function (acumulator, currentValue) {
@@ -220,16 +274,10 @@ const result = customR(((pValue, cValue) => {
 // console.log(List);
 // console.log(sumInitValue);
 // console.log(List);
-
 // let x = 0;
 // for (let object of List) {
 //     x = x + object.price
 // };
 // console.log(x)
-
-
-
-
-
 // console.log(List);
 
