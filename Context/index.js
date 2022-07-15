@@ -15,53 +15,23 @@
 // 2) функцию колбека которая будет изменять значение
 // Функция возвращает :  функция должна вернуть новый массив с измененными значениями
 
-// function customMap(array, change) {
-//     let result = [];
-//     for (let value of array) {
-//         result.push(change(value))
-//     }
-//     return result
-// }
-
-// function customFilter(array, filter) {
-//     let result = [];
-//     for (let value of array) {
-//         if (filter(value)) {
-//             result.push(value)
-//         }
-//     }
-//     return result
-// }
-//
-// function filter(value) {
-//     return value > 0
-// };
-//
-// const Res = customFilter(Arr, filter)
-// console.log(Res)
-
 const Arr = [1,-4,7,12];
-function customR(callback, array) {
-    let result = 0;
+function customMap(array, change) {
+    let result = [];
     for (let value of array) {
-        callback(result)
+        result.push(change(value))
     }
-    return
-};
+    return result
+}
+
+const map = customMap(Arr)
+console.log(map)
 
 
-const result = customR(((sum, current) => {
 
-    if(current > 0){
-        return sum + current
-    } else {
-        return sum
-    }
-}), Arr);
-const abc = customR()
-console.log(abc)
 
 // function suma (money, sok) {
+//     debugger
 //     let sum = 0;
 //     for (let value of money) {
 //         if (value > 0) {
@@ -71,21 +41,8 @@ console.log(abc)
 //     return sum
 // };
 //
-//
-// function test(money, sok) {
-//     let sum = 0;
-//     for (let value of money) {
-//         if (value > 0) {
-//             sum = sum + sok(value)
-//         }
-//     }
-// }
-//
 // const result = suma(Arr, sok)
 // const result2 = suma(Arr, nadva)
-//
-// test(Arr, sok);
-//
 //
 // console.log(result)
 // console.log(result2)
