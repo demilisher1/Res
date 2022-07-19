@@ -15,18 +15,18 @@
 // 2) функцию колбека которая будет изменять значение
 // Функция возвращает :  функция должна вернуть новый массив с измененными значениями
 
-const Arr = [1,-4,7,12];
-function customMap(array, change) {
-    let result = [];
-    for (let value of array) {
-        result.push(change(value))
-    }
-    return result
-}
-
-const map = customMap(Arr)
-console.log(map)
-
+// const Arr = [1,-4,7,12];
+// function customMap(array, change) {
+//     let result = [];
+//     for (let value of array) {
+//         result.push(change(value))
+//     }
+//     return result
+// }
+//
+// const map = customMap(Arr)
+// console.log(map)
+//
 
 
 
