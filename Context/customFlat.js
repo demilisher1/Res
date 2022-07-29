@@ -25,24 +25,56 @@
 //
 // userInputName(user)
 
-const d = {
-    a: function() {
-        console.log('123')
-    },
-    b: () => {
-        console.log('456')
-    },
-    c: () => {
-        console.log(this)
-        d.a();
-        d.b();
-    },
-    cc: function () {
-        return () => {
-            //хочу тут вызвать а и b
-        }
-    }
-}
-d.cc()();
+// const d = {
+//     a: function() {
+//         console.log('123')
+//     },
+//     b: () => {
+//         console.log('456')
+//     },
+//     c: () => {
+//         console.log(this)
+//         d.a();
+//         d.b();
+//     },
+//     cc: function () {
+//         console.log('leve1', this)
+//         return {
+//             test: function () {
+//                 return () => {
+//                     console.log('leve2', this)
+//                     return () => {
+//                         console.log('leve3', this)
+//                         return () => {
+//                             console.log('leve4', this)
+//                             return function() {
+//                                 console.log('leve5', this)
+//                                 this.name = 123
+//                             }
+//
+//                         }
+//                     }
+//                 }
+//             }
+//         }
+//     }
+// }
+// d.cc().test()()()()();
 
-// console.log(sdfsd)
+let value = "Сюрприз!";
+
+function f() {
+    let value = "ближайшее значение";
+
+    function g() {
+        debugger;
+        // в консоли: напишите alert(value); Сюрприз!
+    }
+
+    return g;
+}
+
+let gb = f();
+gb();
+
+
